@@ -1,0 +1,1 @@
+export const firebaseConfig = {apiKey:'AIzaSyB9cKkTT81ii7nqFHy5o5NECu6CogVEp5E',authDomain:'huda-auto-parts.firebaseapp.com',projectId:'huda-auto-parts',storageBucket:'huda-auto-parts.firebasestorage.app',messagingSenderId:'808743773369',appId:'1:808743773369:web:2f1b3c454eb3c918fb6768'};

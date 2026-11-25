@@ -1,0 +1,3 @@
+import {getFirestore,doc,setDoc,getDoc,serverTimestamp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+export async function createProfile(app,user,d){const db=getFirestore(app);await setDoc(doc(db,'customers',user.uid),{customer_id:user.uid,email:user.email,first_name:d.get('first_name').trim(),last_name:d.get('last_name').trim(),phone:d.get('phone').trim(),account_type:d.get('account_type'),company_name:d.get('account_type')==='business'?d.get('company_name').trim():'',created_at:serverTimestamp(),updated_at:serverTimestamp()});}
+export async function readProfile(app,user){const snap=await getDoc(doc(getFirestore(app),'customers',user.uid));return snap.exists()?snap.data():null;}
